@@ -1,0 +1,41 @@
+#root {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.container {
+}
+
+.main {
+
+}
+
+.MyMenu {
+  background-color: #555;
+  height: .44rem;
+  ul {
+    height: .44rem;
+    li {
+      display: block;
+      height: .3rem;
+      line-height: .3rem;
+      border: 1px solid #fff;
+      border-radius: .03rem;
+      margin: 0 .1rem;
+      a {
+        color: #fff;
+        display: block;
+        margin: 0 .1rem;
+      }
+    }
+  }
+}
+
+
+.TestCom {
+  padding: .12rem;
+  background-color: #eee;
+}
+
+
+

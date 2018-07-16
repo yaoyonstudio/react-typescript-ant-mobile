@@ -1,0 +1,49 @@
+.flex {
+  display: flex;
+  @each $direction in r,c {
+    &-#{$direction} {
+      @if $direction == r { @extend .flex; flex-direction: row }
+      @if $direction == c { @extend .flex; flex-direction: column }
+    }
+  }
+  @each $align, $justify in (s,s),(s,e),(s,c),(s,b),(s,a),
+                            (e,s),(e,c),(e,e),(e,b),(e,a),
+                            (c,s),(c,c),(c,e),(c,b),(c,a){
+    &-#{$align}-#{$justify} {
+      @if $align == s {
+        align-items: flex-start;
+      }
+      @if $align == e {
+        align-items: flex-end;
+      }
+      @if $align == c {
+        align-items: center;
+      }
+      @if $justify == s {
+        justify-content: flex-start;
+      }
+      @if $justify == e {
+        justify-content: flex-end;
+      }
+      @if $justify == c {
+        justify-content: center;
+      }
+      @if $justify == b {
+        justify-content: space-between;
+      }
+      @if $justify == a {
+        justify-content: space-around;
+      }
+    }
+  }
+  @each $wrap in wrap, nowrap {
+    &-#{$wrap} {
+      @if ($wrap == wrap) { flex-wrap: wrap }
+      @if ($wrap == nowrap) { flex-wrap: nowrap }
+    }
+  }
+}
+
+.flexItem {
+  flex: 1;
+}

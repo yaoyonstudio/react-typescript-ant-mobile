@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 625%;
+  min-height: 100%; }
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Microsoft Yahei",sans-serif;
+  font-size: .16rem;
+  min-height: 100vh; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; }
+
+.twoLineOverflow {
+  display: block;
+  display: -webkit-box;
+  width: 100%;
+  height: 0.4rem;
+  font-size: 0.16rem;
+  line-height: 0.2rem;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.fourLineOverflow {
+  display: block;
+  display: -webkit-box;
+  width: 100%;
+  height: 0.7rem;
+  font-size: 0.12rem;
+  line-height: 0.175rem;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.textOverflow {
+  display: block;
+  width: 100%;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.arrow_up {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0 12px 12px;
+  border-style: solid;
+  border-color: transparent transparent #d33;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.arrow_down {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #d33 transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.arrow_left {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #d33 transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.arrow_right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #d33;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.Toast {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999; }
+  .Toast section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-radius: .05rem;
+    width: 78%;
+    position: fixed;
+    left: 11%;
+    text-align: center;
+    top: 50%; }
+    .Toast section p {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: .04rem;
+      color: #fff;
+      font-size: .14rem;
+      line-height: .2rem;
+      padding: .06rem .1rem;
+      text-align: center; }
